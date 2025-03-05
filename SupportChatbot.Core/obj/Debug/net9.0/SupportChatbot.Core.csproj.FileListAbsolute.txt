@@ -1,0 +1,5 @@
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.AssemblyInfoInputs.cache
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.AssemblyInfo.cs
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.csproj.CoreCompileInputs.cache
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.sourcelink.json
