@@ -3,6 +3,8 @@ using SupportChatbot.Core;
 using SupportChatbot.Infrastructure.Repositories;
 using Serilog;
 using SupportChatbot.Infrastructure.Logging;
+using SupportChatbot.Core.Services;
+using SupportChatbot.Infrastructure.Repositories.Contracts;
 
 Log.Logger = LoggerConfig.CreateLoggerConfiguration().CreateLogger();
 
@@ -15,6 +17,7 @@ builder.Services.AddDbContext<ChatDbContext>(options =>
 // Register repositories
 builder.Services.AddScoped<IChatMessageRepository, EFChatMessageRepository>();
 builder.Services.AddScoped<ISupportTicketRepository, EFSupportTicketRepository>();
+builder.Services.AddScoped<ISupportUserRepository, EFSupportUserRepository>();
 
 builder.Logging.ClearProviders();
 builder.Host.UseSerilog();

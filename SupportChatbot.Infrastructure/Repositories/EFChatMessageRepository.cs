@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using SupportChatbot.Core.Enums;
+using SupportChatbot.Core.Models;
+using SupportChatbot.Infrastructure.Repositories.Contracts;
+
 namespace SupportChatbot.Infrastructure.Repositories
 {
     
@@ -12,7 +17,7 @@ namespace SupportChatbot.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task AddMessageAsync(ChatMessage message)
+        public async Task AddAsync(ChatMessage message)
         {
             _context.ChatMessages.Add(message);
             await _context.SaveChangesAsync();

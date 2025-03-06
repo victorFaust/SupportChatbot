@@ -1,3 +1,4 @@
+using SupportChatbot.Core.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,6 +10,7 @@ namespace SupportChatbot.Core.Models
     public class SupportUser
     {
         [Key]
+        [MaxLength(50)] // Ensure the length matches SupportTicket.UserId
         public string Id { get; set; }
 
         [Required]
@@ -22,7 +24,7 @@ namespace SupportChatbot.Core.Models
         [MaxLength(50)]
         public string PhoneNumber { get; set; }
 
-        public SupportChatbot.Core.Enums.UserRole Role { get; set; }
+        public UserRole Role { get; set; }
 
         public DateTime CreatedAt { get; set; }
         public DateTime? LastLoginAt { get; set; }

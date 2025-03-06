@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SupportChatbot.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8f5a294c4c48541ee12f4bb207c1014bc20f88f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c9b63f567b48d4cabc7906bb14ee22d1bb0dcb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SupportChatbot.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SupportChatbot.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

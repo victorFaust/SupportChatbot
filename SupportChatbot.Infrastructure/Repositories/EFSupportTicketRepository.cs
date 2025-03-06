@@ -1,8 +1,14 @@
-  namespace SupportChatbot.Infrastructure.Repositories
+using MicroOrm.Dapper.Repositories;
+using Microsoft.EntityFrameworkCore;
+using SupportChatbot.Core.Enums;
+using SupportChatbot.Core.Models;
+using SupportChatbot.Infrastructure.Repositories.Contracts;
+
+namespace SupportChatbot.Infrastructure.Repositories
   {
-    
-  
-  public class EFSupportTicketRepository : ISupportTicketRepository
+
+
+    public class EFSupportTicketRepository : ISupportTicketRepository
     {
         private readonly ChatDbContext _context;
 
@@ -22,6 +28,8 @@
         {
             return await _context.SupportTickets
                 .Include(t => t.Messages)
+                .Include(t => t.User)
+                .Include(t => t.AssignedAgent)
                 .FirstOrDefaultAsync(t => t.Id == ticketId);
         }
 
@@ -37,16 +45,43 @@
         public async Task UpdateTicketStatusAsync(Guid ticketId, TicketStatus status)
         {
             var ticket = await _context.SupportTickets.FindAsync(ticketId);
-            if (ticket != null)
+
+            if (ticket == null)
             {
-                ticket.Status = status;
-                if (status == TicketStatus.Closed)
-                {
-                    ticket.ClosedAt = DateTime.UtcNow;
-                }
-                await _context.SaveChangesAsync();
+                throw new InvalidOperationException($"Ticket with ID {ticketId} not found");
             }
+
+            ticket.Status = status;
+
+            if (status == TicketStatus.Closed)
+            {
+                ticket.ClosedAt = DateTime.UtcNow;
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> CountActiveTicketsForUserAsync(string userId)
+        {
+            // Define active statuses (adjust as needed)
+            var activeStatuses = new[]
+            {
+                TicketStatus.New,
+                TicketStatus.Open,
+                TicketStatus.Pending,
+                TicketStatus.Escalated
+            };
+
+            return await _context.SupportTickets
+                .CountAsync(t => t.UserId == userId && activeStatuses.Contains(t.Status));
+        }
+
+        public async Task<SupportTicket> UpdateTicket(SupportTicket ticket)
+        {
+            _context.SupportTickets.Update(ticket);
+            await _context.SaveChangesAsync();
+            return ticket;
         }
     }
 
-  }
+}

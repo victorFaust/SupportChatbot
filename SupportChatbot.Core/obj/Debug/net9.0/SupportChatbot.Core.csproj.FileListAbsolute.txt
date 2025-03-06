@@ -3,3 +3,10 @@ C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug
 C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.AssemblyInfo.cs
 C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.csproj.CoreCompileInputs.cache
 C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.sourcelink.json
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\bin\Debug\net9.0\SupportChatbot.Core.deps.json
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\bin\Debug\net9.0\SupportChatbot.Core.dll
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\bin\Debug\net9.0\SupportChatbot.Core.pdb
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.dll
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\refint\SupportChatbot.Core.dll
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\SupportChatbot.Core.pdb
+C:\Users\victor.ajadi\RiderProjects\SupportChatbot\SupportChatbot.Core\obj\Debug\net9.0\ref\SupportChatbot.Core.dll
