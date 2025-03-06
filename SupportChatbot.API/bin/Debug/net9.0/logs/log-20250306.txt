@@ -1,0 +1,68 @@
+2025-03-06 10:17:45.777 +01:00 [ERR] Failed executing DbCommand (6,414ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SupportTickets] (
+    [Id] uniqueidentifier NOT NULL,
+    [Subject] nvarchar(200) NOT NULL,
+    [UserId] nvarchar(50) NOT NULL,
+    [AssignedAgentId] nvarchar(50) NOT NULL,
+    [Priority] int NOT NULL,
+    [Status] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [LastUpdatedAt] datetime2 NULL,
+    [ClosedAt] datetime2 NULL,
+    [Resolution] nvarchar(500) NOT NULL,
+    CONSTRAINT [PK_SupportTickets] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_SupportTickets_SupportUsers_AssignedAgentId] FOREIGN KEY ([AssignedAgentId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_SupportTickets_SupportUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION
+); {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","EnvironmentName":"Development","MachineName":"NGLA0999LP15337","ProcessId":35200,"ThreadId":1,"Application":"SupportChatbot"}
+2025-03-06 11:17:00.562 +01:00 [ERR] Failed executing DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SupportTickets] (
+    [Id] uniqueidentifier NOT NULL,
+    [Subject] nvarchar(200) NOT NULL,
+    [UserId] nvarchar(50) NOT NULL,
+    [AssignedAgentId] nvarchar(450) NOT NULL,
+    [Priority] int NOT NULL,
+    [Status] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [LastUpdatedAt] datetime2 NULL,
+    [ClosedAt] datetime2 NULL,
+    [Resolution] nvarchar(500) NOT NULL,
+    CONSTRAINT [PK_SupportTickets] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_SupportTickets_SupportUsers_AssignedAgentId] FOREIGN KEY ([AssignedAgentId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_SupportTickets_SupportUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION
+); {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","EnvironmentName":"Development","MachineName":"NGLA0999LP15337","ProcessId":32828,"ThreadId":1,"Application":"SupportChatbot"}
+2025-03-06 11:22:02.801 +01:00 [ERR] Failed executing DbCommand (34,367ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","EnvironmentName":"Development","MachineName":"NGLA0999LP15337","ProcessId":15372,"ThreadId":1,"Application":"SupportChatbot"}
+2025-03-06 11:22:54.704 +01:00 [ERR] Failed executing DbCommand (35,027ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","EnvironmentName":"Development","MachineName":"NGLA0999LP15337","ProcessId":19184,"ThreadId":1,"Application":"SupportChatbot"}
+2025-03-06 11:24:10.440 +01:00 [ERR] Failed executing DbCommand (173ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SupportTickets] (
+    [Id] uniqueidentifier NOT NULL,
+    [Subject] nvarchar(200) NOT NULL,
+    [UserId] nvarchar(50) NOT NULL,
+    [AssignedAgentId] nvarchar(450) NOT NULL,
+    [Priority] int NOT NULL,
+    [Status] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [LastUpdatedAt] datetime2 NULL,
+    [ClosedAt] datetime2 NULL,
+    [Resolution] nvarchar(500) NOT NULL,
+    CONSTRAINT [PK_SupportTickets] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_SupportTickets_SupportUsers_AssignedAgentId] FOREIGN KEY ([AssignedAgentId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_SupportTickets_SupportUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION
+); {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","EnvironmentName":"Development","MachineName":"NGLA0999LP15337","ProcessId":30796,"ThreadId":1,"Application":"SupportChatbot"}
+2025-03-06 12:28:10.563 +01:00 [ERR] Failed executing DbCommand (168ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SupportTickets] (
+    [Id] uniqueidentifier NOT NULL,
+    [Subject] nvarchar(200) NOT NULL,
+    [UserId] nvarchar(50) NOT NULL,
+    [AssignedAgentId] nvarchar(450) NOT NULL,
+    [Priority] int NOT NULL,
+    [Status] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [LastUpdatedAt] datetime2 NULL,
+    [ClosedAt] datetime2 NULL,
+    [Resolution] nvarchar(500) NOT NULL,
+    CONSTRAINT [PK_SupportTickets] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_SupportTickets_SupportUsers_AssignedAgentId] FOREIGN KEY ([AssignedAgentId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_SupportTickets_SupportUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [SupportUsers] ([Id]) ON DELETE NO ACTION
+); {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","EnvironmentName":"Development","MachineName":"NGLA0999LP15337","ProcessId":29316,"ThreadId":1,"Application":"SupportChatbot"}

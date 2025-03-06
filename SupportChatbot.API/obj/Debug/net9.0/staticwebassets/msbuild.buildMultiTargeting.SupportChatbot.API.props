@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SupportChatbot.API.props" />
+</Project>
